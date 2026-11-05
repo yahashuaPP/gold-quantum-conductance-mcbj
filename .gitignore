@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Notas personales de laboratorio (no se publican)
+data/lab_notes_*.txt
