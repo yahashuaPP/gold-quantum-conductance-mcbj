@@ -1,6 +1,9 @@
 # Quantum Conductance in Gold Atomic Contacts (MCBJ)
 
-Measurement and analysis of **conductance quantization** in gold atomic-scale contacts using a low-cost, home-built **Mechanically Controlled Break Junction (MCBJ)** at room temperature.
+Measurement and analysis of **conductance quantization** in gold atomic-scale contacts using a low-cost **Mechanically Controlled Break Junction (MCBJ)** at room temperature.
+
+**Credits.** The MCBJ device and its read-out electronics (bias source and transimpedance amplifier) were designed and built by **David Llerena** and **Ernesto Medina** (USFQ).
+The 2,423 breaking traces in `data/raw/` were acquired by us with that setup, and the analysis pipeline in `src/` is our own work.
 
 **Authors:** Yahashua Paredes, Ezequiel Guerrero — Experimental Physics, Universidad San Francisco de Quito (USFQ)
 **Presented at:** USFQ Experimental Physics Poster Session, 2026 — [poster (PDF)](poster/poster.pdf)
@@ -27,7 +30,7 @@ For Au (one 6s channel) we expect $T_1 \approx 1$: plateaus near $1G_0$ for mono
 
 ![Single breaking trace](figures/mejor_traza_rank2.png)
 
-## Setup
+## Setup *(built by D. Llerena and E. Medina)*
 
 - Au wire, Ø 0.1 mm, 99.99 % purity, on a 3D-printed PLA substrate (three-point bending)
 - Piezo actuator Thorlabs PK3JMAP1 + KPZ101 controller

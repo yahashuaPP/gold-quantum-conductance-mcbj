@@ -41,7 +41,7 @@ MIN_PUNTOS_CONSEC = 6
 
 # ── Lectura ───────────────────────────────────────────────────────────
 
-def leer_txt_llerena(filepath):
+def leer_traza(filepath):
     valores = []
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         for linea in f:
@@ -227,7 +227,7 @@ def figura_poster(centros, counts, n_trazas):
 
 # ── Procesamiento ─────────────────────────────────────────────────────
 
-def procesar_llerena(carpeta=DATA_DIR):
+def procesar_trazas(carpeta=DATA_DIR):
     archivos = encontrar_todos_txt(carpeta)
     print(f"\nArchivos .txt encontrados: {len(archivos)}")
 
@@ -240,7 +240,7 @@ def procesar_llerena(carpeta=DATA_DIR):
 
     for f in archivos:
         try:
-            g = leer_txt_llerena(f)
+            g = leer_traza(f)
             ok, razon = pasar_filtro(g)
             conteos[razon] = conteos.get(razon, 0) + 1
             if ok:
@@ -276,7 +276,7 @@ if __name__ == "__main__":
     print("  Histograma calidad poster A0")
     print("=" * 60)
 
-    centros, counts, archivos_validos = procesar_llerena()
+    centros, counts, archivos_validos = procesar_trazas()
 
     if centros is not None:
         figura_poster(centros, counts, len(archivos_validos))
